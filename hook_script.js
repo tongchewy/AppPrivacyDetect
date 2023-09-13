@@ -240,15 +240,15 @@ function getSystemData() {
     var action = '获取系统信息';
 
     hook('android.provider.Settings$Secure', [
-        { 'methodName': 'getString', 'args': ['android_id'], 'action': action, 'messages': '获取安卓ID' }
+        { 'methodName': 'getString', 'args': ['android_id'], 'action': action, 'messages': '获取AndroidID' }
     ]);
     hook('android.provider.Settings$System', [
-        { 'methodName': 'getString', 'args': ['android_id'], 'action': action, 'messages': '获取安卓ID' }
+        { 'methodName': 'getString', 'args': ['android_id'], 'action': action, 'messages': '获取AndroidID' }
     ]);
 
 
     hook('android.os.Build', [
-        { 'methodName': 'getSerial', 'action': action, 'messages': '获取设备序列号' },
+        { 'methodName': 'getSerial', 'action': action, 'messages': '获取设备硬件序列号' },
     ]);
 
     hook('android.app.admin.DevicePolicyManager', [
@@ -261,7 +261,7 @@ function getSystemData() {
     ]);
 
     hook('android.telephony.UiccCardInfo', [
-        { 'methodName': 'getIccId', 'action': action, 'messages': '读取手机IccId信息' },
+        { 'methodName': 'getIccId', 'action': action, 'messages': '读取手机iccid信息' },
     ]);
 
     //小米
